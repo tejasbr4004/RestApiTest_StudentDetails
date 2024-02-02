@@ -25,7 +25,7 @@ const users_get_all_details=(req,res)=>{
                         courseDuration:doc.courseDuration,
                         userImage_or_anyFile_info:{
                             img:doc.userImage_or_anyFile,
-                            imageurl:process.env.hostUrl+'/uploads/'+doc.userImage_or_anyFile,
+                            imageurl:doc.userImage_or_anyFile?process.env.hostUrl+'/uploads/'+doc.userImage_or_anyFile:"image or file has not been uploaded to this user,if want use patch to upload",
                             img_description:`paste above image link in your any browser, and if you are seeing "undefined or null" in url then you didn't upload image/document for the respective user`
                         },
                         userapi_info:{
@@ -97,7 +97,8 @@ const user_get_detailsById=(req,res)=>{
                     courseDuration:user.courseDuration,
                     userImage_or_anyFile_info:{
                         img:user.userImage_or_anyFile,
-                        imageurl:process.env.hostUrl+'/uploads/'+user.userImage_or_anyFile,
+                        // imageurl:process.env.hostUrl+'/uploads/'+user.userImage_or_anyFile,
+                        imageurl:user.userImage_or_anyFile?process.env.hostUrl+'/uploads/'+user.userImage_or_anyFile:"image or file has not been uploaded to this user,if want use patch to upload",
                         img_description:`paste above image link in your any browser, and if you are seeing "undefined or null" in url then you didn't upload image/document for the respective user`
                     },
                     userapi_info:{
