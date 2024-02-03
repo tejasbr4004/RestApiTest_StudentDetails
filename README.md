@@ -7,19 +7,22 @@ postman
 
 
 
-*hosturl*:https://restapitest111.cyclic.app
+## hosturl:https://restapitest111.cyclic.app
 
-*routes*: 
+# routes: 
      /users 
      /users/details
-*Methods supported*:
-   GET
-   POST
-   PATCH
-   DELETE
+     
+# http Methods supported:
+    GET
+    POST
+    PATCH
+    DELETE
 
-*how to use*:
-1)For /users/details
+
+# *how to use*:
+
+# 1)For /users/details
     
     i)"get" request
       *API*=```hosturl/users/details```
@@ -47,7 +50,7 @@ postman
          userImage_or_anyFile   
 
         *(In _postman_ ,if you are posting data along with image/file then in body section choose "form-data" option.*
-            *else if you are posting only data with image/file then in body section, you can choose "form-data" or "raw".              (json type)*
+            *else if you are posting only data with image/file then in body section, you can choose "form-data" or "raw(json type)*
          )*
 
 
@@ -62,7 +65,7 @@ postman
           This will delete the user and it's details/info of particular user id.
 
 
-2)For /users
+# 2)For /users
 
      i) "get" request
 
@@ -79,6 +82,6 @@ postman
          *API*=```hosturl/users/id```
          This will give user of particular id (short)
 
-
-*_Use "Postman" for better experience_*
-*_install "json formatter" extension for better viewing experience in browser_*
+# Note:
+>>>> ## *_Use "Postman" for better experience_*
+>>>> ## *_install "json formatter" extension for better viewing experience in browser_*
